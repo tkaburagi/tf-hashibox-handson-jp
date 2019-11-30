@@ -5,10 +5,10 @@ wget "${consul_url}" -O /home/ubuntu/consul.zip
 wget "${nomad_url}" -O /home/ubuntu/nomad.zip
 wget "${terraform_url}" -O /home/ubuntu/terraform.zip
 
-unzip /home/ubuntu/vault.zip
-unzip /home/ubuntu/onsul.zip
-unzip /home/ubuntu/nomad.zip
-unzip /home/ubuntu/terraform.zip
+unzip /home/ubuntu/vault.zip -d /home/ubuntu
+unzip /home/ubuntu/consul.zip -d /home/ubuntu
+unzip /home/ubuntu/nomad.zip -d /home/ubuntu
+unzip /home/ubuntu/terraform.zip -d /home/ubuntu
 
 chmod +x /home/ubuntu/vault
 chmod +x /home/ubuntu/consul
