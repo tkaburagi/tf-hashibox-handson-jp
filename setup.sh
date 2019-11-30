@@ -20,7 +20,7 @@ mv /home/ubuntu/consul /usr/local/bin/
 mv /home/ubuntu/nomad /usr/local/bin/
 mv /home/ubuntu/terraform /usr/local/bin/
 
-rm *.zip
+rm /home/ubuntu/*.zip
 
 echo "ubuntu:${ubuntu_password}" | sudo chpasswd
 
