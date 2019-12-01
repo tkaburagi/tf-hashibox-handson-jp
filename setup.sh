@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+cat /dev/null > /home/ubuntu/.bash_history
+
+history -c
+
 sudo snap install google-cloud-sdk --classic
 
 sudo apt-get -y update
@@ -79,9 +83,3 @@ ubuntu	ALL=(ALL)       ALL
 EOF
 
 sudo service sshd restart
-
-gcloud components install
-
-cat /dev/null > /home/ubuntu/.bash_history
-
-history -c
