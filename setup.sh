@@ -2,7 +2,7 @@
 
 cat /dev/null > /home/ubuntu/.bash_history
 
-history -c
+echo 'history -c' >> /home/ubuntu/.bash_logout
 
 sudo snap install google-cloud-sdk --classic
 
@@ -83,3 +83,5 @@ ubuntu	ALL=(ALL)       ALL
 EOF
 
 sudo service sshd restart
+
+exit
