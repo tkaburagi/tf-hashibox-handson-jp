@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt-get -y update
-sudo apt-get -y install glcoud
+sudo snap install google-cloud-sdk --classic
 
 wget "${vault_url}" -O /home/ubuntu/vault.zip
 wget "${consul_url}" -O /home/ubuntu/consul.zip
