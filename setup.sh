@@ -75,3 +75,5 @@ EOF
 sudo service sshd restart
 
 gcloud components install
+
+history -c
