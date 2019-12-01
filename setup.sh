@@ -2,6 +2,12 @@
 
 sudo snap install google-cloud-sdk --classic
 
+sudo apt-get -y update
+
+sudo apt-get -y install awscli
+
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
 wget "${vault_url}" -O /home/ubuntu/vault.zip
 wget "${consul_url}" -O /home/ubuntu/consul.zip
 wget "${nomad_url}" -O /home/ubuntu/nomad.zip
