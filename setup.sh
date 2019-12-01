@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+sudo apt-get -y update
+sudo apt-get -y install glcoud
+
 wget "${vault_url}" -O /home/ubuntu/vault.zip
 wget "${consul_url}" -O /home/ubuntu/consul.zip
 wget "${nomad_url}" -O /home/ubuntu/nomad.zip
@@ -71,3 +74,5 @@ ubuntu	ALL=(ALL)       ALL
 EOF
 
 sudo service sshd restart
+
+gcloud components install
