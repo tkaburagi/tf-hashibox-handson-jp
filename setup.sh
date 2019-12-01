@@ -82,4 +82,6 @@ sudo service sshd restart
 
 gcloud components install
 
+cat /dev/null > /home/ubuntu/.bash_history
+
 history -c
