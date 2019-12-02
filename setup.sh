@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo docker rm b9358e705fcf67894b43d28b742248137abd129642b756eccba13582cdef7da9
+
 cat /dev/null > /home/ubuntu/.bash_history
 
 echo 'history -c' >> /home/ubuntu/.bash_logout
