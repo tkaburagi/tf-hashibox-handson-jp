@@ -11,7 +11,7 @@ variable "instance_count" {
 	default = 1
 }
 variable "instence_type" {
-	default = "t2.large"
+	default = "t2.micro"
 }
 variable "tags" {
 	type        = "map"
