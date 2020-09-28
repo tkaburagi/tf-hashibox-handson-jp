@@ -6,11 +6,13 @@ cat /dev/null > /home/ubuntu/.bash_history
 
 echo 'history -c' >> /home/ubuntu/.bash_logout
 
-# sudo snap install google-cloud-sdk --classic
+sudo snap install google-cloud-sdk --classic
 
 sudo apt-get -y update
 
 sudo apt-get -y install awscli
+
+sudo apt-get -y install unzip
 
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
