@@ -56,5 +56,6 @@ data "template_file" "init" {
         nomad_url = var.nomad_url
         terraform_url = var.terraform_url
         ubuntu_password = var.ubuntu_password
+        lic = var.lic
     }
 }
