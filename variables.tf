@@ -1,6 +1,7 @@
 variable "access_key" {}
 variable "secret_key" {}
 variable "pubkey" {}
+variable "lic" {}
 variable "region" {
     default = "ap-northeast-1"
 }

@@ -38,6 +38,8 @@ mv /home/ubuntu/terraform /usr/local/bin/
 
 rm /home/ubuntu/*.zip
 
+echo ${lic} > vault-license
+
 echo "ubuntu:${ubuntu_password}" | sudo chpasswd
 
 cat << EOF > /etc/ssh/sshd_config
