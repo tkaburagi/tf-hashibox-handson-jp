@@ -7,13 +7,11 @@ cat /dev/null > /home/ubuntu/.bash_history
 echo 'history -c' >> /home/ubuntu/.bash_logout
 
 sudo snap install google-cloud-sdk --classic
+sudo snap install jq
 
 sudo apt-get -y update
-
 sudo apt-get -y install awscli
-
 sudo apt-get -y install unzip
-
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 wget "${vault_url}" -O /home/ubuntu/vault.zip
@@ -38,7 +36,7 @@ mv /home/ubuntu/terraform /usr/local/bin/
 
 rm /home/ubuntu/*.zip
 
-echo ${lic} > vault-license
+echo ${lic} > /home/ubuntu/vault-license
 
 echo "ubuntu:${ubuntu_password}" | sudo chpasswd
 
