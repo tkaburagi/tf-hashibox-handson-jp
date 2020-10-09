@@ -29,7 +29,7 @@ sudo add-apt-repository \
 sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 
 ### Clients
-sudo apt install mysql-client-core-5.7
+sudo apt-get -y install mysql-client-core-5.7
 
 ### HashiStack
 wget "${vault_url}" -O /home/ubuntu/vault.zip
