@@ -6,14 +6,32 @@ cat /dev/null > /home/ubuntu/.bash_history
 
 echo 'history -c' >> /home/ubuntu/.bash_logout
 
+### gcloud, aws, az
 sudo snap install google-cloud-sdk --classic
 sudo snap install jq
-
 sudo apt-get -y update
 sudo apt-get -y install awscli
 sudo apt-get -y install unzip
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
+### Docker
+sudo apt-get -y install \
+     apt-transport-https \
+     ca-certificates \
+     curl \
+     gnupg-agent \
+     software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository \
+    "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get -y install docker-ce docker-ce-cli containerd.io
+
+### Clients
+sudo apt install mysql-client-core-5.7
+
+### HashiStack
 wget "${vault_url}" -O /home/ubuntu/vault.zip
 wget "${consul_url}" -O /home/ubuntu/consul.zip
 wget "${nomad_url}" -O /home/ubuntu/nomad.zip
@@ -36,8 +54,10 @@ mv /home/ubuntu/terraform /usr/local/bin/
 
 rm /home/ubuntu/*.zip
 
+### Vault License
 echo ${lic} > /home/ubuntu/vault-license
 
+### SSH Setting
 echo "ubuntu:${ubuntu_password}" | sudo chpasswd
 
 cat << EOF > /etc/ssh/sshd_config
