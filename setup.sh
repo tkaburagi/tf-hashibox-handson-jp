@@ -33,7 +33,15 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 sudo apt-get -y install mysql-client-core-5.7
 
 ### Installing Java 8
-#sudo apt-get -y install openjdk-8-jdk
+sudo apt-get -y install openjdk-11-jdk
+
+### Installing PHP
+sudo apt install -y php
+
+### Installing Golang
+wget https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.15.5.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
 
 ### HashiStack
 wget "${vault_url}" -O /home/ubuntu/vault.zip
