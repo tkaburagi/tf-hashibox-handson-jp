@@ -10,6 +10,7 @@ echo 'history -c' >> /home/ubuntu/.bash_logout
 sudo snap install google-cloud-sdk --classic
 sudo snap install jq
 sudo apt-get -y update
+sudo apt-get -y install wget
 sudo apt-get -y install awscli
 sudo apt-get -y install unzip
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
@@ -28,8 +29,11 @@ sudo add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 
-### Clients
+### MYSQL Clients
 sudo apt-get -y install mysql-client-core-5.7
+
+### Installing Java 8
+#sudo apt-get -y install openjdk-8-jdk
 
 ### HashiStack
 wget "${vault_url}" -O /home/ubuntu/vault.zip
@@ -56,6 +60,9 @@ rm /home/ubuntu/*.zip
 
 ### Vault License
 echo ${lic} > /home/ubuntu/vault-license
+
+### Nomad License
+echo ${nomadlic} > /home/ubuntu/nomad-license
 
 ### SSH Setting
 echo "ubuntu:${ubuntu_password}" | sudo chpasswd
