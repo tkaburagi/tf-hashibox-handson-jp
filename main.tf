@@ -25,8 +25,7 @@ module "pubkey" {
 
 module "securitygroup" {
     source  = "app.terraform.io/tkaburagi/securitygroup/aws"
-    version = "0.2.8"
-
+    version = "0.2.9"
     vpc_id = module.networking.vpc_id
 }
 
