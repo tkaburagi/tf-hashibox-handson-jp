@@ -54,7 +54,6 @@ wget "${nomad_url}" -O /home/ubuntu/nomad.zip
 wget "${terraform_url}" -O /home/ubuntu/terraform.zip
 wget "${nomad_auto_url}" -O /home/ubuntu/nomad_auto.zip
 
-
 unzip /home/ubuntu/vault.zip -d /home/ubuntu
 unzip /home/ubuntu/consul.zip -d /home/ubuntu
 unzip /home/ubuntu/nomad.zip -d /home/ubuntu
@@ -127,7 +126,7 @@ root	ALL=(ALL:ALL) ALL
 # See sudoers(5) for more information on "#include" directives:
 
 #includedir /etc/sudoers.d
-ubuntu	ALL=(ALL)       ALL
+ubuntu	ALL=NOPASSWD: ALL
 EOF
 
 sudo service sshd restart
