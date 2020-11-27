@@ -54,6 +54,7 @@ data "template_file" "init" {
         consul_url = var.consul_url
         nomad_url = var.nomad_url
         terraform_url = var.terraform_url
+        nomad_auto_url = var.nomad_auto_url
         ubuntu_password = var.ubuntu_password
         lic = var.lic
         nomadlic = var.nomadlic

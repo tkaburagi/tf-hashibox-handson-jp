@@ -32,6 +32,9 @@ variable "terraform_url" {
 variable "nomad_url" {
 	default = "https://releases.hashicorp.com/nomad/0.10.1/nomad_0.10.1_linux_amd64.zip"
 }
+variable "nomad_auto_url" {
+	default = "https://releases.hashicorp.com/nomad-autoscaler/0.2.0-beta3+ent/nomad-autoscaler_0.2.0-beta3+ent_linux_amd64.zip"
+}
 variable "ubuntu_password" {
 	default = "happy-hacking"
 }

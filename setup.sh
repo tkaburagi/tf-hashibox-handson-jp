@@ -43,26 +43,35 @@ wget https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.15.5.linux-amd64.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin' >> /home/ubuntu/.bashrc
 
+### Prometheus
+wget https://github.com/prometheus/prometheus/releases/download/v2.20.1/prometheus-2.20.1.linux-amd64.tar.gz
+sudo mv prometheus-2.20.1.linux-amd64/prometheus /usr/local/bin/
+
 ### HashiStack
 wget "${vault_url}" -O /home/ubuntu/vault.zip
 wget "${consul_url}" -O /home/ubuntu/consul.zip
 wget "${nomad_url}" -O /home/ubuntu/nomad.zip
 wget "${terraform_url}" -O /home/ubuntu/terraform.zip
+wget "${nomad_auto_url}" -O /home/ubuntu/nomad_auto.zip
+
 
 unzip /home/ubuntu/vault.zip -d /home/ubuntu
 unzip /home/ubuntu/consul.zip -d /home/ubuntu
 unzip /home/ubuntu/nomad.zip -d /home/ubuntu
 unzip /home/ubuntu/terraform.zip -d /home/ubuntu
+unzip /home/ubuntu/nomad_auto.zip -d /home/ubuntu
 
 chmod +x /home/ubuntu/vault
 chmod +x /home/ubuntu/consul
 chmod +x /home/ubuntu/nomad
 chmod +x /home/ubuntu/terraform
+chmod +x /home/ubuntu/nomad-autoscaler
 
 mv /home/ubuntu/vault /usr/local/bin/
 mv /home/ubuntu/consul /usr/local/bin/
 mv /home/ubuntu/nomad /usr/local/bin/
 mv /home/ubuntu/terraform /usr/local/bin/
+mv /home/ubuntu/nomad-autoscaler /usr/local/bin
 
 rm /home/ubuntu/*.zip
 
