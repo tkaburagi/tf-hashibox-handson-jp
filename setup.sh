@@ -45,7 +45,8 @@ echo 'export PATH=$PATH:/usr/local/go/bin' >> /home/ubuntu/.bashrc
 
 ### Prometheus
 wget https://github.com/prometheus/prometheus/releases/download/v2.20.1/prometheus-2.20.1.linux-amd64.tar.gz
-sudo mv prometheus-2.20.1.linux-amd64/prometheus /usr/local/bin/
+tar -xvf prometheus-*.tar.gz
+sudo cp prometheus-*/prometheus /usr/local/bin
 
 ### HashiStack
 wget "${vault_url}" -O /home/ubuntu/vault.zip

@@ -40,7 +40,7 @@ resource "aws_instance" "hashibox" {
     count = var.instance_count
     instance_type = var.instence_type
     vpc_security_group_ids = [module.securitygroup.sg_id]
-    tags = merge(var.tags, map("Name", "hashibox-${count.index}"))
+    tags = merge(var.tags, map("Name", "${var.instance_name}-${count.index}"))
     subnet_id = module.networking.subnet_id
     key_name = module.pubkey.deployer_id
     associate_public_ip_address = true

@@ -15,6 +15,11 @@ variable "instance_count" {
 variable "instence_type" {
 	default = "t2.micro"
 }
+
+variable "instance_name" {
+	default = "hashibox"
+
+}
 variable "tags" {
 	type        = "map"
 	default     = {}
