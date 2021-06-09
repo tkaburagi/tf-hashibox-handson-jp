@@ -10,6 +10,7 @@ module "networking" {
     source  = "app.terraform.io/tkaburagi/networking/aws"
     version = "0.3.0"
 
+    availability_zones = var.availability_zones
     instance_count = var.instance_count
     instance_id = aws_instance.hashibox.*.id
 }
