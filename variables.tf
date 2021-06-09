@@ -1,5 +1,3 @@
-variable "access_key" {}
-variable "secret_key" {}
 variable "pubkey" {}
 variable "lic" {}
 variable "nomadlic" {}
