@@ -6,6 +6,7 @@ variable "region" {
 }
 variable "availability_zones" {
 	type = "list"
+	default = ["us-east-1a"]
 }
 variable "ami" {
 	default = "ami-0e03b7b3b8a8c5e2c"
