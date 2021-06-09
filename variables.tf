@@ -5,6 +5,7 @@ variable "region" {
     default = "ap-northeast-1"
 }
 variable "availability_zones" {
+	type = "list"
 }
 variable "ami" {
 	default = "ami-0e03b7b3b8a8c5e2c"
