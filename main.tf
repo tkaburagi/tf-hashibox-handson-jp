@@ -44,8 +44,7 @@ resource "aws_instance" "hashibox" {
     key_name = module.pubkey.deployer_id
     associate_public_ip_address = true
     user_data = data.template_file.init.rendered
-    ebs_block_device {
-        device_name = "50gib-${count.index}"
+    root_block_device {
         volume_size = 50
     }
 }
