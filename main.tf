@@ -24,7 +24,7 @@ module "pubkey" {
 
 module "securitygroup" {
     source  = "app.terraform.io/tkaburagi/securitygroup/aws"
-    version = "0.2.9"
+    version = "0.2.12"
     vpc_id = module.networking.vpc_id
 }
 
@@ -44,6 +44,10 @@ resource "aws_instance" "hashibox" {
     key_name = module.pubkey.deployer_id
     associate_public_ip_address = true
     user_data = data.template_file.init.rendered
+    ebs_block_device {
+        device_name = "50gib-${count.index}"
+        volume_size = 50
+    }
 }
 
 data "template_file" "init" {
